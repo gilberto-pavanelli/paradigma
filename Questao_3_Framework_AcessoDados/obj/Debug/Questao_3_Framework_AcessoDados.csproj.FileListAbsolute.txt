@@ -1,0 +1,4 @@
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_AcessoDados\bin\Debug\Questao_3_Framework_AcessoDados.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_AcessoDados\bin\Debug\Questao_3_Framework_AcessoDados.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_AcessoDados\obj\Debug\Questao_3_Framework_AcessoDados.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_AcessoDados\obj\Debug\Questao_3_Framework_AcessoDados.pdb

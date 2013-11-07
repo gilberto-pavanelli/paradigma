@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ASPNETDBModelStoreContainer" CdmEntityContainer="ASPNETDBEntities">
+    <EntitySetMapping Name="Funcionarios">
+      <EntityTypeMapping TypeName="IsTypeOf(ASPNETDBModel.Funcionario)">
+        <MappingFragment StoreEntitySet="Funcionarios">
+          <ScalarProperty Name="id_Funcionario" ColumnName="id_Funcionario" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="ValeTransporte" ColumnName="ValeTransporte" />
+          <ScalarProperty Name="ValeRefeicao" ColumnName="ValeRefeicao" />
+          <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ASPNETDBModel.Terceirizado)">
+        <MappingFragment StoreEntitySet="Terceirizados">
+          <ScalarProperty Name="id_Funcionario" ColumnName="id_Funcionario" />
+          <ScalarProperty Name="AuxilioFaculdade" ColumnName="AuxilioFaculdade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ASPNETDBModel.Concursado)">
+        <MappingFragment StoreEntitySet="Concursados">
+          <ScalarProperty Name="id_Funcionario" ColumnName="id_Funcionario" />
+          <ScalarProperty Name="ValorGratificacao" ColumnName="ValorGratificacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

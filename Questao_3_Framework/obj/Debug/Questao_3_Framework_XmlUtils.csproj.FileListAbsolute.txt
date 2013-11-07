@@ -1,0 +1,9 @@
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\bin\Debug\ASPNETDB.MDF
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\bin\Debug\ASPNETDB_log.ldf
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\bin\Debug\Questao_3_Framework.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\bin\Debug\Questao_3_Framework.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\bin\Debug\Questao_3_Modelo.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\bin\Debug\Questao_3_Modelo.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\obj\Debug\Questao_3_Framework_XmlUtils.csprojResolveAssemblyReference.cache
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\obj\Debug\Questao_3_Framework.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework\obj\Debug\Questao_3_Framework.pdb

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<importacao>
+  <tabela nome="Produto">
+    <registros>
+      <registro>
+        <campo nome="Codigo" valor="1"></campo>
+        <campo nome="Descricao" valor="Celular Nokia"></campo>
+      </registro>
+      <registro>
+        <campo nome="Codigo" valor="2"></campo>
+        <campo nome="Descricao" valor="Notebook HP"></campo>
+      </registro>
+      <registro>
+        <campo nome="Codigo" valor="3"></campo>
+        <campo nome="Descricao" valor="Monitor Samsung"></campo>
+      </registro>
+    </registros>
+  </tabela>
+</importacao>

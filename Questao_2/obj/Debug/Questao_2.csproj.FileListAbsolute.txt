@@ -1,0 +1,4 @@
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_2\bin\Questao_2.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_2\bin\Questao_2.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_2\obj\Debug\Questao_2.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_2\obj\Debug\Questao_2.pdb

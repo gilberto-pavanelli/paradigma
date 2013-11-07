@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ASPNETDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ASPNETDBModelStoreContainer">
+          <EntitySet Name="Concursados" EntityType="ASPNETDBModel.Store.Concursados" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Funcionarios" EntityType="ASPNETDBModel.Store.Funcionarios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Terceirizados" EntityType="ASPNETDBModel.Store.Terceirizados" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Concursados_Concursados1" Association="ASPNETDBModel.Store.FK_Concursados_Concursados1">
+            <End Role="Funcionarios" EntitySet="Funcionarios" />
+            <End Role="Concursados" EntitySet="Concursados" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terceirizados_Funcionarios" Association="ASPNETDBModel.Store.FK_Terceirizados_Funcionarios">
+            <End Role="Funcionarios" EntitySet="Funcionarios" />
+            <End Role="Terceirizados" EntitySet="Terceirizados" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Concursados">
+          <Key>
+            <PropertyRef Name="id_Funcionario" />
+          </Key>
+          <Property Name="id_Funcionario" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ValorGratificacao" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Funcionarios">
+          <Key>
+            <PropertyRef Name="id_Funcionario" />
+          </Key>
+          <Property Name="id_Funcionario" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="DataAdmissao" Type="date" Nullable="false" />
+          <Property Name="ValeRefeicao" Type="float" Nullable="false" />
+          <Property Name="ValeTransporte" Type="float" Nullable="false" />
+          <Property Name="Salario" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Terceirizados">
+          <Key>
+            <PropertyRef Name="id_Funcionario" />
+          </Key>
+          <Property Name="id_Funcionario" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AuxilioFaculdade" Type="float" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Concursados_Concursados1">
+          <End Role="Funcionarios" Type="ASPNETDBModel.Store.Funcionarios" Multiplicity="1" />
+          <End Role="Concursados" Type="ASPNETDBModel.Store.Concursados" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Funcionarios">
+              <PropertyRef Name="id_Funcionario" />
+            </Principal>
+            <Dependent Role="Concursados">
+              <PropertyRef Name="id_Funcionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terceirizados_Funcionarios">
+          <End Role="Funcionarios" Type="ASPNETDBModel.Store.Funcionarios" Multiplicity="1" />
+          <End Role="Terceirizados" Type="ASPNETDBModel.Store.Terceirizados" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Funcionarios">
+              <PropertyRef Name="id_Funcionario" />
+            </Principal>
+            <Dependent Role="Terceirizados">
+              <PropertyRef Name="id_Funcionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ASPNETDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ASPNETDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Funcionarios" EntityType="ASPNETDBModel.Funcionario" />
+          </EntityContainer>
+        <EntityType Name="Funcionario" Abstract="true">
+          <Key>
+            <PropertyRef Name="id_Funcionario" />
+          </Key>
+          <Property Name="id_Funcionario" Type="Guid" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" />
+          <Property Name="DataAdmissao" Type="DateTime" Nullable="false" />
+          <Property Name="ValeRefeicao" Type="Double" Nullable="false" />
+          <Property Name="ValeTransporte" Type="Double" Nullable="false" />
+          <Property Name="Salario" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Terceirizado" BaseType="ASPNETDBModel.Funcionario">
+          <Property Type="Double" Name="AuxilioFaculdade" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Concursado" BaseType="ASPNETDBModel.Funcionario">
+          <Property Type="Double" Name="ValorGratificacao" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ASPNETDBModelStoreContainer" CdmEntityContainer="ASPNETDBEntities">
+          <EntitySetMapping Name="Funcionarios">
+            <EntityTypeMapping TypeName="IsTypeOf(ASPNETDBModel.Funcionario)">
+              <MappingFragment StoreEntitySet="Funcionarios">
+                <ScalarProperty Name="id_Funcionario" ColumnName="id_Funcionario" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="ValeTransporte" ColumnName="ValeTransporte" />
+                <ScalarProperty Name="ValeRefeicao" ColumnName="ValeRefeicao" />
+                <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(ASPNETDBModel.Terceirizado)">
+              <MappingFragment StoreEntitySet="Terceirizados">
+                <ScalarProperty Name="id_Funcionario" ColumnName="id_Funcionario" />
+                <ScalarProperty Name="AuxilioFaculdade" ColumnName="AuxilioFaculdade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(ASPNETDBModel.Concursado)">
+              <MappingFragment StoreEntitySet="Concursados">
+                <ScalarProperty Name="id_Funcionario" ColumnName="id_Funcionario" />
+                <ScalarProperty Name="ValorGratificacao" ColumnName="ValorGratificacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloDominio">
+        <EntityTypeShape EntityType="ASPNETDBModel.Funcionario" Width="1.5" PointX="3.375" PointY="0.5" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.Terceirizado" Width="1.5" PointX="4.875" PointY="4.125" Height="1.211080729166667" />
+        <InheritanceConnector EntityType="ASPNETDBModel.Terceirizado">
+          <ConnectorPoint PointX="4.125" PointY="2.8648893229166665" />
+          <ConnectorPoint PointX="4.125" PointY="3.75" />
+          <ConnectorPoint PointX="5.625" PointY="3.75" />
+          <ConnectorPoint PointX="5.625" PointY="4.125" />
+        </InheritanceConnector>
+        <EntityTypeShape EntityType="ASPNETDBModel.Concursado" Width="1.5" PointX="2" PointY="4" Height="1.2110807291666665" />
+        <InheritanceConnector EntityType="ASPNETDBModel.Concursado">
+          <ConnectorPoint PointX="4.125" PointY="2.8648893229166665" />
+          <ConnectorPoint PointX="4.125" PointY="3.625" />
+          <ConnectorPoint PointX="2.75" PointY="3.625" />
+          <ConnectorPoint PointX="2.75" PointY="4" />
+        </InheritanceConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

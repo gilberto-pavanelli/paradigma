@@ -1,0 +1,13 @@
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Framework.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Framework_AcessoDados.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Framework_ControlesWeb.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Modelo.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Framework.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Framework_AcessoDados.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Framework_ControlesWeb.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\bin\Questao_3_Modelo.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\obj\Debug\Questao_3.csprojResolveAssemblyReference.cache
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\obj\Debug\Questao_3.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3\obj\Debug\Questao_3.pdb

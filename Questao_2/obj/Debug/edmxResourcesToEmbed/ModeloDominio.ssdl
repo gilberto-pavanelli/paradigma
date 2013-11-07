@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ASPNETDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ASPNETDBModelStoreContainer">
+    <EntitySet Name="Concursados" EntityType="ASPNETDBModel.Store.Concursados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Funcionarios" EntityType="ASPNETDBModel.Store.Funcionarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Terceirizados" EntityType="ASPNETDBModel.Store.Terceirizados" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Concursados_Concursados1" Association="ASPNETDBModel.Store.FK_Concursados_Concursados1">
+      <End Role="Funcionarios" EntitySet="Funcionarios" />
+      <End Role="Concursados" EntitySet="Concursados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Terceirizados_Funcionarios" Association="ASPNETDBModel.Store.FK_Terceirizados_Funcionarios">
+      <End Role="Funcionarios" EntitySet="Funcionarios" />
+      <End Role="Terceirizados" EntitySet="Terceirizados" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Concursados">
+    <Key>
+      <PropertyRef Name="id_Funcionario" />
+    </Key>
+    <Property Name="id_Funcionario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ValorGratificacao" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Funcionarios">
+    <Key>
+      <PropertyRef Name="id_Funcionario" />
+    </Key>
+    <Property Name="id_Funcionario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="DataNascimento" Type="date" Nullable="false" />
+    <Property Name="DataAdmissao" Type="date" Nullable="false" />
+    <Property Name="ValeRefeicao" Type="float" Nullable="false" />
+    <Property Name="ValeTransporte" Type="float" Nullable="false" />
+    <Property Name="Salario" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Terceirizados">
+    <Key>
+      <PropertyRef Name="id_Funcionario" />
+    </Key>
+    <Property Name="id_Funcionario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuxilioFaculdade" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Concursados_Concursados1">
+    <End Role="Funcionarios" Type="ASPNETDBModel.Store.Funcionarios" Multiplicity="1" />
+    <End Role="Concursados" Type="ASPNETDBModel.Store.Concursados" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionarios">
+        <PropertyRef Name="id_Funcionario" />
+      </Principal>
+      <Dependent Role="Concursados">
+        <PropertyRef Name="id_Funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Terceirizados_Funcionarios">
+    <End Role="Funcionarios" Type="ASPNETDBModel.Store.Funcionarios" Multiplicity="1" />
+    <End Role="Terceirizados" Type="ASPNETDBModel.Store.Terceirizados" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionarios">
+        <PropertyRef Name="id_Funcionario" />
+      </Principal>
+      <Dependent Role="Terceirizados">
+        <PropertyRef Name="id_Funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

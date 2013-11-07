@@ -1,0 +1,4 @@
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_ControlesWeb\bin\Debug\Questao_3_Framework_ControlesWeb.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_ControlesWeb\bin\Debug\Questao_3_Framework_ControlesWeb.pdb
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_ControlesWeb\obj\Debug\Questao_3_Framework_ControlesWeb.dll
+C:\Users\gilberto.pavanelli\Documents\Visual Studio 2010\Projects\Senior\Questao_3_Framework_ControlesWeb\obj\Debug\Questao_3_Framework_ControlesWeb.pdb
